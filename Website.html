@@ -1690,12 +1690,12 @@
               <span>cssa@example.com</span>
             </a>
             <a href="#" class="contact-link">
-              <span>Instagram</span>
-              <span>@cssa_uok (placeholder)</span>
+              <span>linkedin</span>
+              <span>@cssa_uok</span>
             </a>
             <a href="#" class="contact-link">
               <span>Facebook</span>
-              <span>CSSA - University of Kelaniya (placeholder)</span>
+              <span>CSSA - University of Kelaniya</span>
             </a>
           </div>
         </div>
@@ -1709,7 +1709,7 @@
   <footer>
     <div class="container">
       <p>
-        Copyright © 2025 Accelarator 2025 • Design by Nadun Madagama • Computer Science Students’ Association (CSSA), University of Kelaniya.
+        Copyright © Accelarator 2025 • Design by Nadun Madagama • Computer Science Students’ Association (CSSA), University of Kelaniya.
       </p>
     </div>
   </footer>
@@ -1976,90 +1976,8 @@
       });
     })();
 
-    /*
-    ============================================
-    GOOGLE SHEETS SETUP INSTRUCTIONS
-    ============================================
-    
-    To connect this form to Google Sheets, follow these steps:
-    
-    1. Create a Google Sheet:
-       - Go to https://sheets.google.com
-       - Create a new spreadsheet
-       - Name it "Accelerator 2025 Registrations" (or any name you prefer)
-       - Add these column headers in Row 1:
-         A1: Timestamp
-         B1: Full Name
-         C1: Email
-         D1: Faculty/Department
-         E1: Year of Study
-         F1: Phone Number
-    
-    2. Create Google Apps Script:
-       - In your Google Sheet, go to Extensions > Apps Script
-       - Delete any existing code and paste this script:
-    
-    function doPost(e) {
-      try {
-        var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-        
-        // Parse the form data (URL-encoded)
-        var data = {
-          timestamp: e.parameter.timestamp,
-          fullName: e.parameter.fullName,
-          email: e.parameter.email,
-          faculty: e.parameter.faculty,
-          year: e.parameter.year,
-          phone: e.parameter.phone
-        };
-        
-        // Add the data to the sheet
-        sheet.appendRow([
-          data.timestamp,
-          data.fullName,
-          data.email,
-          data.faculty,
-          data.year,
-          data.phone
-        ]);
-        
-        return ContentService.createTextOutput(JSON.stringify({
-          "result": "success",
-          "message": "Registration recorded successfully"
-        })).setMimeType(ContentService.MimeType.JSON);
-      } catch (error) {
-        return ContentService.createTextOutput(JSON.stringify({
-          "result": "error",
-          "message": error.toString()
-        })).setMimeType(ContentService.MimeType.JSON);
-      }
-    }
-    
-    3. Deploy as Web App:
-       - Click "Deploy" > "New deployment"
-       - Click the gear icon (⚙️) next to "Select type" and choose "Web app"
-       - Set the following:
-         * Description: "Accelerator Registration Form Handler"
-         * Execute as: "Me"
-         * Who has access: "Anyone" (or "Anyone with Google account" for more security)
-       - Click "Deploy"
-       - Copy the Web App URL that appears
-    
-    4. Update the Website:
-       - In this HTML file, find the line:
-         const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE";
-       - Replace "YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE" with your Web App URL
-    
-    5. Test the form:
-       - Submit a test registration
-       - Check your Google Sheet to verify the data was recorded
-    
-    Note: The first time you access the Web App URL, Google will ask for permission.
-    Click "Review Permissions" and authorize the script to access your Google Sheet.
-    ============================================
-    */
-
   </script>
 </body>
 </html>
 ```
+
